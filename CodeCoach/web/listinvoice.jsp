@@ -1,3 +1,5 @@
+<%@page import="java.time.LocalDate"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="model.Slot"%>
 <%@page import="model.Skills"%>
 <%@page import="model.BookingDetails"%>
@@ -146,7 +148,13 @@
                                                 }%>
                                         </th>
                                         <th>
-                                            <%out.print(listBookingDetails.get(o).getDate());%>
+                                            <%DateTimeFormatter initialFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                                                LocalDate date = LocalDate.parse(listBookingDetails.get(o).getDate(), initialFormatter);
+                                                // ??nh d?ng m?i
+                                                DateTimeFormatter newFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                                                String newDateString = date.format(newFormatter);
+                                                out.print(newDateString);
+                                            %>
                                         </th>
                                     </tr>
                                 </table>
