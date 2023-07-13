@@ -21,6 +21,15 @@ public class Notifications {
     public Notifications() {
     }
 
+    public Notifications(int userId, int bookingId, String content, String dateTime, String type, String status) {
+        this.userId = userId;
+        this.bookingId = bookingId;
+        this.content = content;
+        this.dateTime = dateTime;
+        this.type = type;
+        this.status = status;
+    }
+
     public Notifications(int notificationId, int userId, int bookingId, String content, String dateTime, String type, String status) {
         this.notificationId = notificationId;
         this.userId = userId;

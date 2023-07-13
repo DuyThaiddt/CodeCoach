@@ -71,7 +71,7 @@ public class BookingSuccessfulController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         try {
-            HttpSession session = request.getSession();
+             HttpSession session = request.getSession();
             Users u = (Users) session.getAttribute("users");
             String userId = Integer.toString(u.getUserId());
             String menteeId = new MenteeDAO().getMenteeIdbyUserId(userId);

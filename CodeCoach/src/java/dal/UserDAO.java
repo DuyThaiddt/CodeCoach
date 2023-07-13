@@ -4,14 +4,15 @@
  */
 package dal;
 
+import model.Roles;
+import model.Users;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import model.Roles;
-import model.Users;
 
 /**
  *
@@ -71,7 +72,8 @@ public class UserDAO extends DBContext {
         return user;
     }
 
-    
+
+
      public List<Users> getAllUser() {
         List<Users> listUsers = new ArrayList<>();
         String querry = "select * from Users";
@@ -248,7 +250,6 @@ public class UserDAO extends DBContext {
                 list.add(userInfo);
             }
         } catch (Exception e) {
-            System.out.println(e);
         }
         return list;
     }
@@ -281,13 +282,13 @@ public class UserDAO extends DBContext {
                 o[16] = rs.getString(17); //ttp name
             }
         } catch (Exception e) {
-            System.out.println(e);
+
         }
         return o;
     }
 
     public void updateRoleIdUser(String userId) {
-        String query = "UPDATE [dbo].[Users] SET [roleId] = 2 WHERE userId = " + userId + "";
+        String query = "UPDATE [dbo].[Users] SET [roleId] = 2 WHERE userId = "+userId+"";
         try {
             conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
@@ -327,8 +328,8 @@ public class UserDAO extends DBContext {
         }
         return o;
     }
-     
-    
+
+
 
     public String getUserNameByUserId(int userId) {
         String fullName = "";
@@ -361,7 +362,7 @@ public class UserDAO extends DBContext {
         }
         return 0;
     }
-    
+
     public int getTotalUsers(){
         String query = "select count(userid) as Total from users";
         try {

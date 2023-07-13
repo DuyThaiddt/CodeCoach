@@ -35,29 +35,25 @@
                     <div class="login-right">
                         <h1>Privacy Policy:</h1>
                         <br>
-                        <%int count = 1;%>
                         <c:forEach items="${listPpat}" var="o">
                             <c:if test="${o.getType()==1}">
-                                <h3><%=count%> .${o.getSummary()}</h3>
+                                <h3>${o.getId()} .${o.getSummary()}</h3>
                                 <br>
                                 <ul>
                                     <li>${o.getContent()}</li>
                                 </ul>
-                                <%count++;%>
                             </c:if>
                         </c:forEach>
                         <br>
                         <br>
                         <h1>Terms:</h1>
                         <br>
-                        <%int count1 = 1;%>
                         <c:forEach items="${listPpat}" var="o">
                             <c:if test="${o.getType()==2}">
-                                <h3><%=count1%> .${o.getSummary()}</h3>
+                                <h3>${o.getId()} .${o.getSummary()}</h3>
                                 <br>
                                 <ul>
                                     <li>${o.getContent()}</li>
-                                    <%count1++;%>
                                 </ul>
                             </c:if>
                         </c:forEach>

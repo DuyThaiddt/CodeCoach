@@ -33,7 +33,7 @@
         <div class="main-wrapper">
 
             <!-- Header is placed here -->
-            <%@include file="../header.jsp" %>
+            <%@include file="header.jsp" %>
             <!--End of header-->
             <div class="breadcrumb-bar">
                 <div class="container-fluid">
@@ -136,7 +136,7 @@
                 </div>
             </div>
             <!--Footer start-->
-            <%@include file="../footer.jsp" %>
+            <%@include file="footer.jsp" %>
             <!-- Footer end -->
 
         </div>

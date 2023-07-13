@@ -18,7 +18,6 @@ import model.Users;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -40,19 +39,29 @@ public class MentorBookingController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        Users user = (Users) request.getSession().getAttribute("users");
-        if(user == null || user.getRoleId() != 2){
-            response.sendRedirect("login");
-            return;
+        String go = request.getParameter("go");
+        if (go == null){
+            Users user = (Users) request.getSession().getAttribute("users");
+            if(user == null || user.getRoleId() != 2){
+                response.sendRedirect("login");
+                return;
+            }
+
+            Mentors mentor = new MentorDAO().getMentorByUserId(user.getUserId());
+
+            ArrayList<Booking> mentorBookings = new BookingDAO().getBookingMentorId(mentor.getMentorId());
+
+            request.setAttribute("mentorBookings", mentorBookings);
+
+            request.getRequestDispatcher("booking/mentor-booking.jsp").forward(request, response);
         }
-
-        Mentors mentor = new MentorDAO().getMentorByUserId(Integer.toString(user.getUserId()));
-
-        List<Booking> mentorBookings = new BookingDAO().getBookingsByMentorId(mentor.getMentorId());
-
-        request.setAttribute("mentorBookings", mentorBookings);
-
-        request.getRequestDispatcher("booking/mentor-booking.jsp").forward(request, response);
+        else if("change-status".equals(go)){
+            int bookingId = Integer.parseInt(request.getParameter("booking-id"));
+            String status = request.getParameter("status");
+            BookingDAO bookingDAO = new BookingDAO();
+            bookingDAO.updateBookingStatus(bookingId, status);
+            response.sendRedirect("mentor-booking");
+        }
 
     }
 

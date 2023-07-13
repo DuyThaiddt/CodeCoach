@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from mentoring.dreamguystech.com/html/template/appointments.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:33:04 GMT -->
+<head>
+<meta charset="utf-8">
+<title>Mentoring</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+
+<header class="header">
+<div class="header-fixed">
+<nav class="navbar navbar-expand-lg header-nav">
+<div class="navbar-header">
+<a id="mobile_btn" href="javascript:void(0);">
+<span class="bar-icon">
+<span></span>
+<span></span>
+<span></span>
+</span>
+</a>
+<a href="index.html" class="navbar-brand logo">
+<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+</a>
+</div>
+<div class="main-menu-wrapper">
+<div class="menu-header">
+<a href="index.html" class="menu-logo">
+<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+</a>
+<a id="menu_close" class="menu-close" href="javascript:void(0);">
+<i class="fas fa-times"></i>
+</a>
+</div>
+<ul class="main-nav">
+<li class="has-submenu">
+<a href="index.html">Home <i class="fas fa-chevron-down"></i></a>
+<ul class="submenu">
+<li><a href="index.html">Home</a></li>
+<li><a href="index-two.html">Home 2</a></li>
+<li><a href="index-three.html">Home 3</a></li>
+<li><a href="index-four.html">Home 4</a></li>
+<li><a href="index-five.html">Home 5</a></li>
+<li><a href="index-six.html">Home 6</a></li>
+<li><a href="index-seven.html">Home 7</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href>Mentor <i class="fas fa-chevron-down"></i></a>
+<ul class="submenu">
+<li><a href="dashboard.html">Mentor Dashboard</a></li>
+<li><a href="bookings.html">Bookings</a></li>
+<li><a href="schedule-timings.html">Schedule Timing</a></li>
+<li><a href="mentee-list.html">Mentee List</a></li>
+<li><a href="profile-mentee.html">Mentee Profile</a></li>
+<li class="has-submenu">
+<a href="blog.html">Blog</a>
+<ul class="submenu">
+<li><a href="blog.html">Blog</a></li>
+<li><a href="blog-details.html">Blog View</a></li>
+<li><a href="add-blog.html">Add Blog</a></li>
+<li><a href="edit-blog.html">Edit Blog</a></li>
+</ul>
+</li>
+<li><a href="chat.html">Chat</a></li>
+<li><a href="invoices.html">Invoices</a></li>
+<li><a href="profile-settings.html">Profile Settings</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="mentor-register.html">Mentor Register</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href>Mentee <i class="fas fa-chevron-down"></i></a>
+<ul class="submenu">
+<li class="has-submenu">
+<a href="#">Mentors</a>
+<ul class="submenu">
+<li><a href="map-grid.html">Map Grid</a></li>
+<li><a href="map-list.html">Map List</a></li>
+</ul>
+</li>
+<li><a href="search.html">Search Mentor</a></li>
+<li><a href="profile.html">Mentor Profile</a></li>
+<li><a href="bookings-mentee.html">Bookings</a></li>
+<li><a href="checkout.html">Checkout</a></li>
+<li><a href="booking-success.html">Booking Success</a></li>
+<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+<li><a href="favourites.html">Favourites</a></li>
+<li><a href="chat-mentee.html">Chat</a></li>
+<li><a href="profile-settings-mentee.html">Profile Settings</a></li>
+<li><a href="change-password.html">Change Password</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href>Pages <i class="fas fa-chevron-down"></i></a>
+<ul class="submenu">
+<li><a href="voice-call.html">Voice Call</a></li>
+<li><a href="video-call.html">Video Call</a></li>
+<li><a href="search.html">Search Mentors</a></li>
+<li><a href="components.html">Components</a></li>
+<li class="has-submenu">
+<a href="invoices.html">Invoices</a>
+<ul class="submenu">
+<li><a href="invoices.html">Invoices</a></li>
+<li><a href="invoice-view.html">Invoice View</a></li>
+</ul>
+</li>
+<li><a href="blank-page.html">Starter Page</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="forgot-password.html">Forgot Password</a></li>
+</ul>
+</li>
+<li class="has-submenu">
+<a href>Blog <i class="fas fa-chevron-down"></i></a>
+<ul class="submenu">
+<li><a href="blog-list.html">Blog List</a></li>
+<li><a href="blog-grid.html">Blog Grid</a></li>
+<li><a href="blog-details.html">Blog Details</a></li>
+</ul>
+</li>
+<li>
+<a href="admin/index.html" target="_blank">Admin</a>
+</li>
+<li class="login-link">
+<a href="login.html">Login / Signup</a>
+</li>
+</ul>
+</div>
+<ul class="nav header-navbar-rht">
+
+<li class="nav-item dropdown has-arrow logged-item">
+<a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+<span class="user-img">
+<img class="rounded-circle" src="assets/img/user/user.jpg" width="31" alt="Darren Elder">
+</span>
+</a>
+<div class="dropdown-menu dropdown-menu-end">
+<div class="user-header">
+<div class="avatar avatar-sm">
+<img src="assets/img/user/user.jpg" alt="User Image" class="avatar-img rounded-circle">
+</div>
+<div class="user-text">
+<h6>Jonathan Doe</h6>
+<p class="text-muted mb-0">Mentor</p>
+</div>
+</div>
+<a class="dropdown-item" href="dashboard.html">Dashboard</a>
+<a class="dropdown-item" href="profile-settings.html">Profile Settings</a>
+<a class="dropdown-item" href="login.html">Logout</a>
+</div>
+</li>
+
+</ul>
+</nav>
+</div>
+</header>
+
+
+<div class="breadcrumb-bar">
+<div class="container-fluid">
+<div class="row align-items-center">
+<div class="col-md-12 col-12">
+<nav aria-label="breadcrumb" class="page-breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Appointments</li>
+</ol>
+</nav>
+<h2 class="breadcrumb-title">Appointments</h2>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+
+<div class="profile-sidebar">
+<div class="user-widget">
+<div class="pro-avatar">JD</div>
+<div class="rating">
+<i class="fas fa-star filled"></i>
+<i class="fas fa-star filled"></i>
+<i class="fas fa-star filled"></i>
+<i class="fas fa-star filled"></i>
+<i class="fas fa-star"></i>
+</div>
+<div class="user-info-cont">
+<h4 class="usr-name">Jonathan Doe</h4>
+<p class="mentor-type">English Literature (M.A)</p>
+</div>
+</div>
+<div class="progress-bar-custom">
+<h6>Complete your profiles ></h6>
+<div class="pro-progress">
+<div class="tooltip-toggle" tabindex="0"></div>
+<div class="tooltip">80%</div>
+</div>
+</div>
+<div class="custom-sidebar-nav">
+<ul>
+<li><a href="dashboard.html"><i class="fas fa-home"></i>Dashboard <span><i class="fas fa-chevron-right"></i></span></a></li>
+<li><a href="bookings.html"><i class="fas fa-clock"></i>Bookings <span><i class="fas fa-chevron-right"></i></span></a></li>
+<li><a href="schedule-timings.html"><i class="fas fa-hourglass-start"></i>Schedule Timings <span><i class="fas fa-chevron-right"></i></span></a></li>
+<li><a href="chat.html"><i class="fas fa-comments"></i>Messages <span><i class="fas fa-chevron-right"></i></span></a></li>
+<li><a href="invoices.html"><i class="fas fa-file-invoice"></i>Invoices <span><i class="fas fa-chevron-right"></i></span></a></li>
+<li><a href="reviews.html"><i class="fas fa-eye"></i>Reviews <span><i class="fas fa-chevron-right"></i></span></a></li>
+<li><a href="blog.html"><i class="fab fa-blogger-b"></i>Blog <span><i class="fas fa-chevron-right"></i></span></a></li>
+<li><a href="profile.html"><i class="fas fa-user-cog"></i>Profile <span><i class="fas fa-chevron-right"></i></span></a></li>
+<li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Logout <span><i class="fas fa-chevron-right"></i></span></a></li>
+</ul>
+</div>
+</div>
+
+</div>
+<div class="col-md-7 col-lg-8 col-xl-9">
+<div class="appointments">
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user2.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Tyrone Roberts</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96e2efe4f9f8f3e4f9f4f3e4e2e5d6f3eef7fbe6faf3b8f5f9fb">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user1.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Julie Pennington </a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 12 Nov 2019, 5.00 PM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> North Carolina, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="49233c25202c392c272720272e3d2627092c31282439252c672a2624">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 828 632 9170</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user3.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Allen Davis</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 9 Nov 2019, 9.00 AM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9a8a5a5aca7ada8bfa0ba89acb1a8a4b9a5ace7aaa6a4">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 260 724 7769</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user4.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Patricia Manzi</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 9 Nov 2019, 1.00 PM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> Indiana, United States</h5>
+<h5><i class="fas fa-envelope"></i> patriciamanziexample.com</h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 504 368 6874</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user5.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Olive Lawrence</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 8 Nov 2019, 3.00 PM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> Florida, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="294645405f4c45485e5b4c474a4c694c51484459454c074a4644">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 954 820 7887</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user6.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Frances Foster</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 6 Nov 2019, 9.00 AM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> Kentucky, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="355347545b565046535a4641504775504d54584559501b565a58">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 315 384 4562</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user7.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Deloris Briscoe </a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 5 Nov 2019, 12.00 PM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> California, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9cdccc5c6dbc0dacbdbc0dacac6cce9ccd1c8c4d9c5cc87cac6c4">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 707 2202 603</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user8.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Daniel Griffing</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 5 Nov 2019, 7.00 PM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> New Jersey, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c383d323539303b2e353a3a35323b1c39243d312c3039723f3331">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 973 773 9497</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user9.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Walter Roberson</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 4 Nov 2019, 10.00 AM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> Florida, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6314020f170611110c010611100c0d23061b020e130f064d000c0e">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 850 358 4445</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user10.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Robert Rhodes</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 4 Nov 2019, 11.00 AM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> California, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="66140904031412140e0902031526031e070b160a034805090b">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 858 259 5285</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+
+<div class="appointment-list">
+<div class="profile-info-widget">
+<a href="profile-mentee.html" class="booking-user-img">
+<img src="assets/img/user/user11.jpg" alt="User Image">
+</a>
+<div class="profile-det-info">
+<h3><a href="profile-mentee.html">Harry Williams</a></h3>
+<div class="mentee-details">
+<h5><i class="far fa-clock"></i> 3 Nov 2019, 6.00 PM</h5>
+<h5><i class="fas fa-map-marker-alt"></i> Colorado, United States</h5>
+<h5><i class="fas fa-envelope"></i> <a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ce4edfefef5fbe5e0e0e5ede1ffcce9f4ede1fce0e9a2efe3e1">[email&#160;protected]</a></h5>
+<h5 class="mb-0"><i class="fas fa-phone"></i> +1 303 607 7075</h5>
+</div>
+</div>
+</div>
+<div class="appointment-action">
+<a href="#" class="btn btn-sm bg-info-light" data-bs-toggle="modal" data-bs-target="#appt_details">
+<i class="far fa-eye"></i> View
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-success-light">
+<i class="fas fa-check"></i> Accept
+</a>
+<a href="javascript:void(0);" class="btn btn-sm bg-danger-light">
+<i class="fas fa-times"></i> Cancel
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer class="footer">
+
+<div class="footer-top">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-3 col-md-6">
+
+<div class="footer-widget footer-about">
+<div class="footer-logo">
+<img src="assets/img/logo.png" alt="logo">
+</div>
+<div class="footer-about-content">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+<div class="social-icon">
+<ul>
+<li>
+<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+</li>
+<li>
+<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+</li>
+<li>
+<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</li>
+<li>
+<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+</li>
+<li>
+<a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6">
+
+<div class="footer-widget footer-menu">
+<h2 class="footer-title">For Mentee</h2>
+<ul>
+<li><a href="search.html">Search Mentors</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+</ul>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6">
+
+<div class="footer-widget footer-menu">
+<h2 class="footer-title">For Mentors</h2>
+<ul>
+<li><a href="appointments.html">Appointments</a></li>
+<li><a href="chat.html">Chat</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="dashboard.html">Mentor Dashboard</a></li>
+</ul>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6">
+
+<div class="footer-widget footer-contact">
+<h2 class="footer-title">Contact Us</h2>
+<div class="footer-contact-info">
+<div class="footer-address">
+<span><i class="fas fa-map-marker-alt"></i></span>
+<p> 3556 Beech Street, San Francisco,<br> California, CA 94108 </p>
+</div>
+<p>
+<i class="fas fa-phone-alt"></i>
++1 315 369 5943
+</p>
+<p class="mb-0">
+<i class="fas fa-envelope"></i>
+<a href="https://mentoring.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2548404b514a574c4b4265405d44485549400b464a48">[email&#160;protected]</a>
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="footer-bottom">
+<div class="container-fluid">
+
+<div class="copyright">
+<div class="row">
+<div class="col-12 text-center">
+<div class="copyright-text">
+<p class="mb-0">&copy; 2020 Mentoring. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</footer>
+
+</div>
+
+
+<div class="modal fade custom-modal" id="appt_details">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Appointment Details</h5>
+<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<ul class="info-details">
+<li>
+<div class="details-header">
+<div class="row">
+<div class="col-md-6">
+<span class="title">#APT0001</span>
+<span class="text">21 Oct 2019 10:00 AM</span>
+</div>
+<div class="col-md-6">
+<div class="text-end">
+<button type="button" class="btn bg-success-light btn-sm" id="topup_status">Completed</button>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<span class="title">Status:</span>
+<span class="text">Completed</span>
+</li>
+<li>
+<span class="title">Confirm Date:</span>
+<span class="text">29 Jun 2019</span>
+</li>
+<li>
+<span class="title">Paid Amount</span>
+<span class="text">$450</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+<script src="assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+<script src="assets/js/script.js"></script>
+</body>
+
+<!-- Mirrored from mentoring.dreamguystech.com/html/template/appointments.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 10:33:04 GMT -->
+</html>

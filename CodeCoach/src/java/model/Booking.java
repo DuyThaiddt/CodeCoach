@@ -54,6 +54,13 @@ public class Booking {
         }
     }
 
+    public Booking(int mentorId, int menteeId, int skillId, String status) {
+        this.mentorId = mentorId;
+        this.menteeId = menteeId;
+        this.skillId = skillId;
+        this.status = status;
+    }
+
     public String getStartTime() {
         return startTime;
     }

@@ -12,17 +12,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.util.List;
-import model.Booking;
-import dal.BookingDAO;
-import dal.BookingDetailDAO;
-import dal.MenteeDAO;
-import dal.MentorDAO;
-import dal.SkillDAO;
-import model.BookingDetails;
-import model.Mentees;
-import model.Mentors;
-import model.Skills;
 
 /**
  *
@@ -66,16 +55,6 @@ public class ListBookingController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        List<Booking> listBookings = new BookingDAO().getAllBooking();
-        List<BookingDetails> listBookingDetails = new BookingDetailDAO().getAllBookingDetails();
-        List<Skills> listSkills = new SkillDAO().getAllSkill();
-        List<Mentors> listMentors = new MentorDAO().getAllMentor();
-        List<Mentees> listMentees = new MenteeDAO().getAllMentee();
-        request.setAttribute("listMentors", listMentors);
-        request.setAttribute("listMentees", listMentees);
-        request.setAttribute("listSkills", listSkills);
-        request.setAttribute("listBookings", listBookings);
-        request.setAttribute("listBookingDetails", listBookingDetails);
         request.getRequestDispatcher("listbooking.jsp").forward(request, response);
     } 
 

@@ -39,58 +39,34 @@ public class ExpertiseDAO {
         return list;
     }
 
-      public Expertise getExpertiseByMentorIdandSkillId(int mentorId, String skillId) {
-        String query = "select * from Expertise where mentorId ="+mentorId+" and skillId="+skillId+"";      
-        try {
-            conn = new DBContext().getConnection();
-            ps = conn.prepareStatement(query);
-            ps.setInt(1, mentorId);
-            rs = ps.executeQuery();
-            while (rs.next()) {
-                Expertise e = new Expertise(rs.getInt(1), rs.getInt(2), rs.getInt(3));
-                return e;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    
     public List<Object[]> getExpertiseDetailsByMentorId(int mentorId) {
-        String query = "SELECT e.expertiseId, e.mentorId, e.skillId, s.skillName FROM Expertise e JOIN Skills s ON e.skillId = s.skillId WHERE e.mentorId = ?";
-        List<Object[]> list = new ArrayList<>();
+    String query = "SELECT e.expertiseId, e.mentorId, e.skillId, s.skillName FROM Expertise e JOIN Skills s ON e.skillId = s.skillId WHERE e.mentorId = ?";
+    List<Object[]> list = new ArrayList<>();
 
-        try {
-            conn = new DBContext().getConnection();
-            ps = conn.prepareStatement(query);
-            ps.setInt(1, mentorId);
-            rs = ps.executeQuery();
+    try {
+        conn = new DBContext().getConnection();
+        ps = conn.prepareStatement(query);
+        ps.setInt(1, mentorId);
+        rs = ps.executeQuery();
 
-            while (rs.next()) {
-                Object[] expertiseDetails = new Object[4];
-                // Populate the array with data from the ResultSet
-                expertiseDetails[0] = rs.getInt(1);
-                expertiseDetails[1] = rs.getInt(2);
-                expertiseDetails[2] = rs.getInt(3);
-                expertiseDetails[3] = rs.getString(4);
+        while 
+                (rs.next()) {
+            Object[] expertiseDetails = new Object[4];
+            // Populate the array with data from the ResultSet
+            expertiseDetails[0] = rs.getInt(1);
+            expertiseDetails[1] = rs.getInt(2);
+            expertiseDetails[2] = rs.getInt(3);
+            expertiseDetails[3] = rs.getString(4);
 
-                list.add(expertiseDetails);
-            }
-        } catch (Exception e) {
-
+            list.add(expertiseDetails);
         }
+    } catch (Exception e) {
+        
+    } 
 
-        return list;
-    }
-    
-    public void insertExpertise(int mentorId, String skillId) {
-        String query = "INSERT INTO [dbo].[Expertise]([mentorId],[skillId]) VALUES("+mentorId+","+skillId+")";   
-        try {
-            conn = new DBContext().getConnection();
-            ps = conn.prepareStatement(query);
-            rs = ps.executeQuery();
-           
-        } catch (Exception e) {
-        }
-    }
+    return list;
+}
+
+
+
 }

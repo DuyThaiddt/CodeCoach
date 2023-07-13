@@ -33,7 +33,7 @@
                                         </div>
 
                                         <form action="mentorregister" method="post">  
-
+                                            
                                             <div class="form-group form-focus">        
                                                 <textarea type="text" row="3" name="biography" class="form-control floating"></textarea>
                                                 <label class="focus-label">Enter your biography</label>
@@ -43,25 +43,28 @@
                                                 <label class="focus-label">Enter number of hourly rate that you want</label>
                                             </div>   
                                             <div class="form-group form-focus">
-                                                <input type="text" name="description" class="form-control floating">
+                                                <input type="text" name="hourlyRate" class="form-control floating">
                                                 <label class="focus-label">Enter your description</label>
                                             </div> 
-                                            <div class="form-group">
-                                                <label class="form-control-label">Skill</label>
-                                                <select class="form-select" name="skillList" required>
-                                                    <option value="" selected=""></option>
-                                                    <c:forEach items="${listSkill}" var="sk">
-                                                        <option value="${sk.getSkillId()}">${sk.getSkillName()}</option>
-                                                    </c:forEach>
-                                                </select>
-                                            </div>                                          
+                                            <div class="form-group form-focus">
+                                                <input type="text" name="hourlyRate" class="form-control floating">
+                                                <label class="focus-label">Enter your skill</label>
+                                            </div> 
+                                            <div class="form-group form-focus">
+                                                <input type="text" name="hourlyRate" class="form-control floating">
+                                                <label class="focus-label">Enter your SubCategories</label>
+                                            </div> 
+                                            <div class="form-group form-focus">
+                                                <input type="text" name="hourlyRate" class="form-control floating">
+                                                <label class="focus-label">Enter your Categories</label>
+                                            </div> 
                                             <div class="text-end">
                                                 <a class="forgot-link" href="login">Already have an account?</a>
                                             </div>
                                             <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Signup</button>
                                             <div class="form-group form-focus">    
                                                 <input type="hidden"  value="${users.userId}" readonly="readonly" name="userId" class="form-control floating">
-
+                                               
                                             </div>
                                             <div class="login-or">
                                                 <span class="or-line"></span>                                              
@@ -88,7 +91,7 @@
 
         <script src="assets/js/script.js"></script>
     </body>
-
+    
     <%@include file="footer.jsp" %>
-
+    
 </html>

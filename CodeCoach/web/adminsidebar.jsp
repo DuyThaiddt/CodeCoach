@@ -17,11 +17,11 @@
                     <li><a href="bookings.html"><i class="fas fa-list-alt"></i>List Mentors <span><i
                                     class="fas fa-chevron-right"></i></span></a></li>
                     <li><a href="schedule-timings.html"><i class="fas fa-list-alt"></i>List Mentees<span><i class="fas fa-chevron-right"></i></span></a></li>
-                    <li><a href="listbooking"><i class="fas fa-list-alt"></i>List Booking <span><i
+                    <li><a href="chat.html"><i class="fas fa-list-alt"></i>List Booking <span><i
                                     class="fas fa-chevron-right"></i></span></a></li>
-                    <li><a href="listcategory"><i class="fas fa-list-alt"></i>List Categories <span><i
+                    <li><a href="invoices.html"><i class="fas fa-list-alt"></i>List Categories <span><i
                                     class="fas fa-chevron-right"></i></span></a></li>
-                    <li><a href="viewtransaction"><i class="fas fa-file-invoice"></i>View Transactions <span><i
+                    <li><a href="reviews.html"><i class="fas fa-file-invoice"></i>View Transactions <span><i
                                     class="fas fa-chevron-right"></i></span></a></li>
                     <li><a href="editfaq"><i class="fas fa-question-circle"></i>FAQ <span><i
                                     class="fas fa-chevron-right"></i></span></a></li>

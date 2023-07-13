@@ -35,6 +35,10 @@
                 <br>
                 <div class="account-box">              
                     <div class="login-right">
+<<<<<<< HEAD
+
+=======
+>>>>>>> upstream/master
                         <div class="accordion" id="accordionExample">
                             <c:forEach items="${listFaq}" var="o">
                                 <div class="accordion-item">

@@ -12,6 +12,10 @@ import java.util.List;
 import model.Mentees;
 import model.Users;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 /**
  *
  * @author giang
@@ -20,13 +24,13 @@ public class MenteeDAO {
     Connection conn = null;
     PreparedStatement ps = null;
     ResultSet rs = null;
-    
+
     private final String GET_USER_BY_MENTEE_ID = " SELECT *\n" +
             "FROM Users\n" +
             "JOIN Mentees ON Users.userId = Mentees.userId\n" +
             "WHERE Mentees.menteeId = ?";
 
-    
+
     public Users getUserByMenteeId (int menteeId) {
         Users user = new Users();
         try {
@@ -42,7 +46,7 @@ public class MenteeDAO {
         }
         return user;
     }
-    
+
     public String getMenteeIdbyUserId(String userId) {
         String menteeId ="";
         String query = "Select menteeId from Mentees where userId="+userId+"";
@@ -57,7 +61,7 @@ public class MenteeDAO {
         }
         return menteeId;
     }
-     
+
     public List<Mentees> getAllMentee() {
         List<Mentees> listMentees = new ArrayList<>();
         String querry = "select * from Mentees";
@@ -73,7 +77,7 @@ public class MenteeDAO {
 
         return listMentees;
     }
-    
+
     public int getTotalMenteeNumber() {
         String query = "select count(menteeid) as Total from mentees";
         try {

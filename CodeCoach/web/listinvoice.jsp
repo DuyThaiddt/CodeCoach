@@ -1,4 +1,3 @@
-<%@page import="model.Slot"%>
 <%@page import="model.Skills"%>
 <%@page import="model.BookingDetails"%>
 <%@page import="model.Mentees"%>
@@ -42,7 +41,7 @@
         <%@include file="header.jsp" %>
         <!--End of header-->
 
-        <div class="account-box">              
+        <div class="account-box">
             <div class="login-right">
                 <div class="accordion" id="accordionExample">
 
@@ -53,17 +52,6 @@
                         List<Mentees> listMentees = (List<Mentees>) request.getAttribute("mentees");
                         List<Skills> listSkills = (List<Skills>) request.getAttribute("skills");
                         List<BookingDetails> listBookingDetails = (List<BookingDetails>) request.getAttribute("bookingDetails");
-                        List<Slot> listSlots = (List<Slot>) request.getAttribute("slots");
-                        %>
-                        <table class="table">
-                            <tr style="font-size: 40px;">
-                                    <th>Mentor Name</th>
-                                    <th>Mentee Name</th>
-                                    <th>Skill</th>
-                                    <th>Invoice</th>
-                                </tr>                                   
-                            </table>
-                    <%
                         for (int i = 0; i < listBookings.size(); i++) {
                             int userId = 0;
                             String fullName = "";
@@ -72,8 +60,15 @@
                     <div class="accordion-item">
 
                         <h2 class="accordion-header" id="<%="heading" + i%>">
-                            
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="<%="#collapse" + i%>" aria-expanded="false" aria-controls="<%="collapse" + i%>">                             
+                            <table>
+                                <tr>
+                                    <th>Mentor Name</th>
+                                    <th>Mentee Name</th>
+                                    <th>Skill</th>
+                                    <th>Invoice</th>
+                                </tr>
+                            </table>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="<%="#collapse" + i%>" aria-expanded="false" aria-controls="<%="collapse" + i%>">
                                 <table>
                                     <tr>
                                         <th>
@@ -121,17 +116,17 @@
                                                         count = count + 1;
                                                     }
                                                 }
-                                                invoice = count * Integer.parseInt(m.getHourlyRate()) * 2;
+                                                invoice = count * Integer.parseInt(m.getHourlyRate());
                                             %>
                                             <%out.print(invoice);%>
                                         </th>
-                                    </tr>                                   
+                                    </tr>
                                 </table>
                             </button>
                         </h2>
                         <div id="<%="collapse" + i%>" class="accordion-collapse collapse" aria-labelledby="<%="heading" + i%>" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <%for (int o = 0; o < listBookingDetails.size(); o++) {
+                                <%for (int o = 0; o <listBookingDetails.size(); o++) {
                                         if (listBookingDetails.get(o).getBookingId() == listBookings.get(i).getBookingId()) {
                                 %>
                                 <table>
@@ -139,11 +134,6 @@
 
                                         <th>
                                             <%out.print("Slot " + listBookingDetails.get(o).getSlotId());%>
-                                            <%for (int v = 0; v < listSlots.size(); v++) {
-                                                    if (listBookingDetails.get(o).getSlotId() == listSlots.get(v).getSlotId()) {
-                                                        out.print("("+listSlots.get(v).getStartTime().substring(0, 5) +" - "+listSlots.get(v).getEndTime().substring(0, 5)+")");
-                                                    }
-                                                }%>
                                         </th>
                                         <th>
                                             <%out.print(listBookingDetails.get(o).getDate());%>
@@ -155,19 +145,18 @@
                                     }%>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                     <%
                         }
                     %>
                 </div>
             </div>
-            <%@include file="footer.jsp" %>
         </div>
 
 
         <script src="assets/js/jquery-3.6.0.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/script.js"></script>
-
+        <%@include file="footer.jsp" %>
     </body>
 </html>
